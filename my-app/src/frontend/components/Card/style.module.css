@@ -1,0 +1,58 @@
+.card_container {
+    width: 100%;
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.div_infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.tittleFunc {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #707070;
+}
+.question h5 {
+    /* H5 */
+
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 115%;
+/* identical to box height, or 16px */
+
+
+color: #3A3A3A;
+}
+.buttonVertical {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    height: 84px;
+    width: 60px;
+    background: #4FA1C1;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
