@@ -10,7 +10,7 @@ export default function CardFuncionario({funcionario}) {
         <h1 className={styles.tittleFunc}>{funcionario.nome}</h1>
         <div className={styles.div_infos}>
             <Button>{funcionario.cpf}</Button>
-            <Button>Atv {funcionario.Epis.length -1 }</Button>
+            <Button>Atv {funcionario.Epis }</Button>
             <Button>Cargo {funcionario.cargo}</Button>
         </div>
         

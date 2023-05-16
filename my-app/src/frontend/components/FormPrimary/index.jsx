@@ -2,47 +2,44 @@ import { Button } from 'antd'
 import styles from './style.module.css'
 import { Switch, } from 'antd';
 import CardFuncionario from '../Card/index'
+import { useState, useEffect } from 'react';
+import ServicosUsuarios  from "../../../backend/services"
 
+export default function FormPrimary({ alterForm }) {
 
+    const [usuarios, setUsuarios] = useState([]);
 
-export default function FormPrimary() {
+    useEffect(() => {
+        const carregarUsuarios = async () => {
+            try {
+                const servicosUsuarios = new ServicosUsuarios();
+                const usuarios = await servicosUsuarios.obterUsuarios();
+                
+                setUsuarios(usuarios);
+            } catch (error) {
+                console.error('Erro ao buscar usuários:', error);
+            }
+        };
 
-    const arrFuncionarios = [
-        {
-            "nome": "raphael",
-            "sexo": "M",
-            "cpf": "321.989.788-65",
-            "data de nascimento": "02/07/2001",
-            "RG": "3504358",
-            "cargo": 2,
-            "usaEpi": true,
-            "Epis": [
-                {
-                    "atividade": 1,
-                    "nome": "calçado de segurança",
-                    "numeroDoCA": 9878
-                }
-            ],
-            "estado de saude": "document.png "
-        }
-    ]
+        carregarUsuarios();
+    }, []);
     return (
         <div className={styles.container}>
             <div className={styles.head_container}> <h1>Funcionarios</h1></div>
             <div className={styles.buttons}>
-                <button className={styles.adicionar}> + Adicionar Funcionário</button>
+                <button className={styles.adicionar} onClick={alterForm} > + Adicionar Funcionário</button>
                 <div className={styles.container_row}>
                     <Button size='medium'>Ver apenas ativos</Button>
                     <Button size='medium'>Limpar filtros</Button>
                 </div>
             </div>
             <div className={styles.container_cards}>
-                {arrFuncionarios.map(item => <CardFuncionario funcionario={item} />)}
+                {usuarios.map(item => <CardFuncionario funcionario={item} />)}
             </div>
 
             <div className={styles.question}>
                 <h5>A estapa está concluída?</h5>
-                <Switch checkedChildren="Sim" unCheckedChildren="Não" defaultChecked  />
+                <Switch checkedChildren="Sim" unCheckedChildren="Não" defaultChecked />
             </div>
             <div className={styles.question}>
                 <button className={styles.buttonSucess}>Próximo passo</button>

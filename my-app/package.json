@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": ""
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
@@ -16,9 +17,11 @@
     "@types/react-dom": "18.2.3",
     "antd": "^5.4.6",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
     "fontawesome": "^5.6.3",
+    "json-server": "^0.17.3",
     "next": "13.3.4",
     "postcss": "8.4.23",
     "react": "18.2.0",
@@ -28,7 +31,8 @@
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.10",
     "tailwindcss": "3.3.2",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.13.6"

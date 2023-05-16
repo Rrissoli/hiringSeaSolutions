@@ -1,0 +1,31 @@
+{
+  "usuarios": [
+    {
+      "nome": "Raphael",
+      "cpf": "3211231231",
+      "rg": "32132123131",
+      "sexo": "Masculino",
+      "dataNascimento": "02/07/2001",
+      "cargo": "atv1",
+      "atividade": "atv1",
+      "epi": "epi1",
+      "numeroCA": "12312324",
+      "arquivo": null,
+      "ativo": true
+    },
+    {
+      "id": "fe0a353b-8053-44ee-8c94-a1c9df6d2b69",
+      "nome": "SHEIN",
+      "cpf": "123123123",
+      "rg": "12312312312312",
+      "sexo": "masculino",
+      "dataNascimento": "2023-05-16",
+      "cargo": "atv02",
+      "atividade": "epi2",
+      "epi": "epi2",
+      "numeroCA": "1231231231231",
+      "arquivo": {},
+      "ativo": true
+    }
+  ]
+}
