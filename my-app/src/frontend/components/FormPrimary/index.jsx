@@ -34,7 +34,7 @@ export default function FormPrimary({ alterForm }) {
                 </div>
             </div>
             <div className={styles.container_cards}>
-                {usuarios.map(item => <CardFuncionario funcionario={item} />)}
+                {usuarios.map(item => <CardFuncionario funcionario={item} key={1}/>)}
             </div>
 
             <div className={styles.question}>
